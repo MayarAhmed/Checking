@@ -1,0 +1,144 @@
+
+
+<!-- Navbar&Sidebar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light navar">
+  <div class="">
+      <button class="menu" type="button" (click)= "openSidebar()"  [style.margin-left.px]="sided">
+          <div class="menu__item--1"></div>
+          <div class="menu__item--2"></div>
+          <div class="menu__item--3"></div>
+        </button>
+        <aside [hidden]=toggled [style.margin-left.px]="sided">
+          <div class="bar-content p-3" >
+            <h4 class="text-secondary py-5">Mayar</h4>
+            <ul class="d-flex-md-column pl-0 ">
+                <li class="py-3">
+                  <a href="#" class="text-secondary">
+                      <i class="fas fa-home mr-3"></i> Home 
+                    </a>
+                </li>
+                <!-- <li class="dropdown-divider"></li> -->
+                <li class="py-3">
+                   <a href="#" class="text-secondary"> 
+                      <i class="fas fa-link mr-3"></i>Managment Links  </a>
+                  </li>
+                  <!-- <li class="dropdown-divider"></li> -->
+                <li class="py-3">
+                  <a href="#" class="text-secondary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <i class="fas fa-chart-pie mr-3"></i> Your Statics
+                    </a>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </div>
+                      </div>
+                  </li>
+                  <!-- <li class="dropdown-divider"></li> -->
+
+                <li class="py-3 position-relative cordio">
+                   <a href="#" class="text-secondary"> 
+                     <i class="fas fa-users mr-3"></i>Chatter Groups</a>
+                     <i class="fa fa-chevron-down chev"></i>
+                     <ul class="choice">
+                       <li class="text-secondary"> Group 1</li>
+                       <li class="text-secondary"> Group 2</li>
+                       <li class="text-secondary"> Group 3</li>
+                     </ul>
+                  </li>
+                
+                  <!-- <li class="dropdown-divider"></li> -->
+
+                <li class="py-3">
+                   <a href="#" class="text-secondary">
+                     <i class="fas fa-certificate mr-3"></i>Badges</a>
+                  </li>
+                  <!-- <li class="dropdown-divider"></li> -->
+
+                <li class="py-3">
+                <a href="#" class="text-secondary"><i class="fas fa-ribbon mr-3"></i> TrailHead Badges </a>
+                  </li>
+                
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+<div class="container" [style.margin-left.px]="adding" >
+  <div>
+<a class="navbar-brand" href="#">
+  <img src="../../../assets/images/logoz.png">
+</a>
+
+</div>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+    <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form> -->
+  <ul class="navbar-nav nav">
+    <li class="nav-item dropdown noti">
+      <a class="nav-link dropdown-toggle position-relative" href="#" (click)="openNoti()" >
+        <i class="fas fa-bell pt-3"></i> </a>
+        <span class="quantity  position-absolute text-light text-center">1</span>
+        <div [hidden]=show>
+        <div class="noti-dropdown">
+        <div class="dropdown-title">
+            <p class="text-center h5">You have 2 new Notification</p>
+        </div>
+            <div class="dropdown-divider border-0"></div>
+            <div class="dropdown-item">
+             <div class="drop-image mr-1 d-inline-block">
+               <img src="../../../assets/images/avatar-03.jpg" alt="friend">
+             </div>
+              <div class="drop-content d-inline-block">
+                Ahmed Upgrade a new challnage
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">
+              <div class="drop-image mr-1 d-inline-block">
+                <img src="../../../assets/images/avatar-06.jpg" alt="friend">
+              </div>
+               <div class="drop-content d-inline-block">
+                 a friend has started challange with you
+               </div>
+             </div>
+          </div>
+        </div>
+    </li>
+    <li class="nav-item dropdown msg">
+      <a class="nav-link  position-relative" href="#" (click)="openTask()">
+         <i class="fas fa-tasks mr-2 pt-3 "></i></a>
+      <span class="quantity  position-absolute text-light text-center">1</span>
+      <div class="msg-dropdown show-msg" [hidden]=hide>
+        <div class="dropdown-title">
+            <p class="text-center h5">You have 2 new Tasks</p>
+        </div>
+            <div class="dropdown-divider border-0"></div>
+            <div class="dropdown-item">
+             <div class="drop-image mr-1 d-inline-block">
+               <img src="images/avatar-06.jpg" alt="friend">
+             </div>
+              <div class="drop-content d-inline-block">
+                a friend has started challange with you
+              </div>
+            </div>
+          </div>
+    </li>
+    <li class="nav-item">
+        <img src="../../../assets/images/profile.jpeg" alt="profile" class="mx-2">
+        <span class="h4">Mayar</span>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+    </li>
+  
+  </ul>
+  
+</div>
+</div>
+</nav>
+<div [style.margin-left.px]="adding">
+<app-data></app-data>
+</div>

@@ -1,0 +1,108 @@
+<div class="content position-relative">
+
+  <div class="container">
+<div class="first-section row w-100 px-4">
+       <div class="mt-5">
+          <a routerLink="/timesheet" routerLinkActive="active" class="h3 text-secondary">Time sheet</a>        
+           <div class="col-md-6">
+       <table id="calendar">
+           <tr id="monthrow">
+               <th colspan="7">
+                   <button id="prev" onclick="prevMonth()">&#10094;</button>
+                   <span id="month"></span>
+                   <button id="next" onclick="nextMonth()">&#10095;</button>
+               </th>
+           </tr>
+           <tr class="daysoftheweek">
+               <th>Sun</th>
+               <th>Mon</th>
+               <th>Tue</th>
+               <th>Wed</th>
+               <th>Thu</th>
+               <th>Fri</th>
+               <th>Sat</th>
+           </tr>
+       </table>
+   </div>
+ </div>
+
+
+
+<!-- Rank -->
+<div class="rank col-md-5 mt-5 p-3">
+<h4 class="text-secondary d-inline-block">This Week Ranking</h4>
+   <div class="chart pt-4">
+     <canvas id="myChart" width="100" height="240"></canvas>
+   </div>
+
+</div>
+
+<!-- Leave -->
+ <div class="col-md-4 chlng bg-light mt-3 p-3 m-4 textt-center">
+ <h3 class="text-secondary">Leave Balance</h3>
+ <circle-progress
+ [percent]="80"
+ [radius]="100"
+ [outerStrokeWidth]="16"
+ [innerStrokeWidth]="8"
+ [outerStrokeColor]="'#78C000'"
+ [innerStrokeColor]="'#C7E596'"
+ [animation]="true"
+ [animationDuration]="300"
+></circle-progress>
+</div> 
+
+<!-- Bar -->
+<div class="col-md-7 clg bg-light mt-3 p-3">
+ <canvas id="percent-chart" width="300" height="200"></canvas>
+
+</div>
+
+<!-- Certificate -->
+<div class="col-md-6 py-5">
+ <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+   <div class="panel">
+     <div class="panel-heading" role="tab" id="headingOne">
+       <h4 class="panel-title">
+     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+       Certificate Update
+     </a>
+   </h4>
+     </div>
+     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+       <div class="panel-body p-2">
+         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+       </div>
+     </div>
+   </div>
+
+</div>
+</div>
+
+<div class="col-md-6 py-5">
+<div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+ <div class="panel">
+   <div class="panel-heading" role="tab" id="headingOne">
+     <h4 class="panel-title">
+   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+     Recent Updtes
+   </a>
+ </h4>
+   </div>
+   <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+     <div class="panel-body p-2">
+       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+     </div>
+   </div>
+ </div>
+
+</div>
+</div>
+
+</div>
+<!-- end of section -->
+</div>   
+<!-- end of container -->
+   </div> 
+   <!-- end of content -->
+

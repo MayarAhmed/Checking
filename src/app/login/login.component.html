@@ -1,0 +1,70 @@
+
+<div class="log text-center">
+    <h2>ZCLOUD CONSULTANCY INTERNAL <br>
+        OPERATIONS ONLINE PORTAL</h2>
+
+<div class="left d-inline-block">
+    <h1 class="text-uppercase text-light">Welcome <br>To</h1>
+  <img src="../../assets/images/zlog.png">
+  
+</div>
+<div class="right d-inline-block text-center">
+   <!-- <a href="#" class="d-inline-block pr-3"><h2>Login</h2></a> -->
+   <i class="fas fa-user-circle  pr-3 pb-5"></i>
+
+   <form  [formGroup]="loginForm" #formDir="ngForm" class="mx-auto pl-4">
+
+      <div [hidden]="formDir.submitted">
+          <div class="cross-validation" 
+          [class.cross-validation-error]="loginForm.errors?.identity && 
+          (loginForm.touched || loginForm.dirty)"></div>
+          <div class="form-group text-left">
+              <!-- <label for="name" class="text-light">Name</label> -->
+              <input id="name" class="form-control"
+              formControlName="name" placeholder="USERNAME" required >
+              
+          <div *ngIf="name.invalid && (name.dirty || name.touched)"
+          class="alert alert-danger">
+
+          <div *ngIf="name.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+          
+        </div>
+
+      </div>
+
+      <div class="form-group text-left">
+          <!-- <label for="alterEgo" class="text-light ">Passowrd</label> -->
+          <input id="alterEgo" class="form-control"
+              formControlName="alterEgo" placeholder="F" >
+        </div>
+
+        <div *ngIf="loginForm.errors?.identity && (loginForm.touched || loginForm.dirty)" class="cross-validation-error-message alert alert-danger">
+            Name cannot match alter ego.
+        </div>
+      </div>
+
+
+
+    
+    <button type="submit" class="signin btn btn-default mr-3 mb-3 bg-warning d-block"
+    [disabled]="loginForm.invalid" (click)="gotoHome()">Login</button>
+    <button type="submit" class="signup btn btn-default bg-primary mr-3 d-block" (click)="formDir.resetForm({})">SignUp</button>
+</form>
+
+<div class="submitted-message" *ngIf="formDir.submitted">
+<p>You've submitted your hero, {{ loginForm.value.name }}!</p>
+<button (click)="formDir.resetForm({})">Add new hero</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+   
